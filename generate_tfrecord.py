@@ -91,10 +91,13 @@ def main(_):
     grouped = split(examples, 'filename')
     i = 1
     for group in grouped:
-        print(str(i)+"/"+str(len(grouped)))
-        tf_example = create_tf_example(group, path)
-        writer.write(tf_example.SerializeToString())
-        i = i+1
+        try:
+            print(str(i)+"/"+str(len(grouped)))
+            tf_example = create_tf_example(group, path)
+            writer.write(tf_example.SerializeToString())
+            i = i+1
+        except:
+            print("Error")
 
     writer.close()
     output_path = os.path.join(os.getcwd(), FLAGS.output_path)
