@@ -11,14 +11,6 @@ Setup the following directory structure
 
 ## Run in the following order
 ```
-	$ git clone https://github.com/tensorflow/models.git 
-```
-Follow the installation instructions [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md).
-	
-```
-	# In tensorflow/models/research
-	$ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim 
-
 	$ python3 script1.py
 
 	$ python3 script2.py

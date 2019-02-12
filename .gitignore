@@ -1,5 +1,7 @@
 images
+cocoapi
 model
+models
 nets
 object_detection
 pycocotools
